@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suv idishlari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3105/3105807.png">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">BottleZone</a>
+
+        <nav class="menu">
+            <a href="#home">Bosh sahifa</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#products">Mahsulotlar</a>
+            <a href="#benefits">Afzalliklar</a>
+            <a href="#contact">Aloqa</a>
+            <button class="theme-btn" onclick="changeTheme()">🌙 Tungi rejim</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Har kuni <span>toza suv</span> iching!</h1>
+            <p>
+                BottleZone bilan o‘zingizga mos suv idishini tanlang.
+                Sifatli, chiroyli va qulay idishlar siz uchun!
+            </p>
+            <a href="#products" class="btn">Mahsulotlarni ko‘rish</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle"></div>
+            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=85" alt="Suv idishi">
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>Biz <span>haqimizda</span></h2>
+            <p>BottleZone — suv idishlari olami</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-img">
+                <img src="71zkzx-VtyL._AC_UF1000,1000_QL80_.jpg" alt="Suv idishlari">
+            </div>
+
+            <div class="about-text">
+                <h2>Bizning maqsadimiz</h2>
+                <p>
+                    Sizga kundalik hayotda foydalanish uchun qulay
+                    va chiroyli suv idishlarini tanishtirish.
+                </p>
+                <p>
+                    Sportda, maktabda, ishda yoki sayohatda
+                    suv idishi doimo yoningizda bo‘lsin.
+                </p>
+                <a href="#products" class="btn">Tanlashni boshlash</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>Bizning <span>mahsulotlar</span></h2>
+            <p>O‘zingizga mos idishni tanlang</p>
+        </div>
+
+        <div class="product-list">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=85" alt="Oddiy suv idishi">
+                </div>
+                <h3>Oddiy idish</h3>
+                <p>Kundalik foydalanish uchun qulay.</p>
+                <button onclick="buyBottle('Oddiy idish')">Tanlash</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="shopping.webp" alt="Sport suv idishi">
+                </div>
+                <h3>Sport idishi</h3>
+                <p>Mashg‘ulot va sayohatlar uchun.</p>
+                <button onclick="buyBottle('Sport idishi')">Tanlash</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="shopping (1).webp" alt="Zamonaviy suv idishi">
+                </div>
+                <h3>Zamonaviy idish</h3>
+                <p>Chiroyli ko‘rinish va qulaylik.</p>
+                <button onclick="buyBottle('Zamonaviy idish')">Tanlash</button>
+            </div>
+        </div>
+
+        <p id="orderMessage"></p>
+    </section>
+
+    <section class="section" id="benefits">
+        <div class="section-title">
+            <h2>Bizning <span>afzalliklarimiz</span></h2>
+            <p>Nega suv idishidan foydalanish kerak?</p>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">💧</div>
+                <h3>Qulaylik</h3>
+                <p>Suvni istalgan joyda o‘zingiz bilan olib yuring.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🌱</div>
+                <h3>Tabiatga foyda</h3>
+                <p>Qayta ishlatiladigan idish chiqindilarni kamaytirishga yordam beradi.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">💙</div>
+                <h3>Sog‘lom odat</h3>
+                <p>Kun davomida yetarli suv ichishni unutmang.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="facts">
+        <div class="section-title">
+            <h2>Suv haqida <span>qiziqarli faktlar</span></h2>
+            <p>Yangi ma’lumotni bilib oling</p>
+        </div>
+
+        <div class="fact-box">
+            <div class="fact-icon">💧</div>
+            <p id="factText">Suv inson tanasining normal ishlashi uchun zarur.</p>
+            <button class="btn" onclick="showFact()">Yana bir fakt</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Mijozlar <span>fikrlari</span></h2>
+            <p>Biz haqimizdagi fikrlar</p>
+        </div>
+
+        <div class="reviews">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Idishlarning ko‘rinishi menga juda yoqdi.</p>
+                <h3>Aziz</h3>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Sport bilan shug‘ullanishda juda qulay.</p>
+                <h3>Madina</h3>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Oddiy va chiroyli dizayn menga yoqadi.</p>
+                <h3>Jasur</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="section-title">
+            <h2>Ko‘p beriladigan <span>savollar</span></h2>
+            <p>Javoblarni ko‘rish uchun savolni bosing</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button onclick="showAnswer(1)">1. Qanday idishlar mavjud?</button>
+                <p id="answer1">Oddiy, sport va zamonaviy suv idishlari mavjud.</p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="showAnswer(2)">2. Idishni qayerda ishlatish mumkin?</button>
+                <p id="answer2">Maktabda, ishda, sportda va sayohatlarda ishlatish mumkin.</p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="showAnswer(3)">3. Idishni qayta ishlatish mumkinmi?</button>
+                <p id="answer3">Bu idishning materiali va ishlab chiqaruvchi ko‘rsatmalariga bog‘liq.</p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="showAnswer(4)">4. Qanday aloqa qilish mumkin?</button>
+                <p id="answer4">Quyidagi aloqa formasini to‘ldirishingiz mumkin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="section-title">
+            <h2>Biz bilan <span>bog‘laning</span></h2>
+            <p>Savol yoki taklifingiz bormi?</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Sizni tinglashga tayyormiz!</h2>
+                <p>Ismingizni va xabaringizni yozib yuboring.</p>
+                <p>💧 BottleZone — har kuni toza suv.</p>
+            </div>
+
+            <form class="contact-form" onsubmit="sendMessage(); return false;">
+                <input type="text" id="name" placeholder="Ismingiz" required>
+                <input type="email" id="email" placeholder="Elektron pochtangiz" required>
+                <textarea id="message" placeholder="Xabaringiz" required></textarea>
+                <button type="submit" class="btn">Xabarni yuborish</button>
+                <p id="formMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>💧 BottleZone</p>
+        <p>Suv idishlari olamiga xush kelibsiz!</p>
+        <p>© 2026 BottleZone. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
